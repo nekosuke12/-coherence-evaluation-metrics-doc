@@ -68,21 +68,17 @@
 <span id="metric-compare"></span><h1>metric_compare<a class="headerlink" href="#metric_compare" title="Permalink to this headline"></a></h1>
 <p>This script is used to calculate the model and metric accuracies for a given model and metric.</p>
 <p>See <a href="https://gitlab.cl.uni-heidelberg.de/ogura/automatic-evaluation-metrics-for-vcr-systems/-/blob/master/README.md">README.md</a> for a detailed explanation and usage.</p>
-<dl class="py function">
-<dt class="sig sig-object py" id="metric_compare.main">
-<span class="sig-prename descclassname"><span class="pre">metric_compare.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metric</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metric_compare.main" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
+
 
 <dl class="py function">
-<dt class="sig sig-object py" id="metric_compare.predict">
-<span class="sig-prename descclassname"><span class="pre">metric_compare.</span></span><span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metric</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vcr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metric_compare.predict" title="Permalink to this definition"></a></dt>
-<dd><p>This function is unused in this file, but it can still serve as a template for metric.scoreall functions.</p>
+<dt class="sig sig-object py" id="metric_compare.eval">
+<span class="sig-prename descclassname"><span class="pre">metric_compare.</span></span><span class="sig-name descname"><span class="pre">eval</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metric</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#metric_compare.eval" title="Permalink to this definition"></a></dt>
+<dd><p>Evaluate a specific model with a specific metric.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>metric</strong> (<em>string</em>) – either “knowledgebased”, “grade”, “bertscore”, “bleu” or “meteor”</p></li>
-<li><p><strong>vcr</strong> (<em>string</em>) – location of dataset</p></li>
-<li><p><strong>r</strong> (<em>string</em>) – location of generated rationales</p></li>
+<li><p><strong>metric</strong> (<em>object</em>) – the metric object</p></li>
+<li><p><strong>model</strong> (<em>string</em>) – the model name in the dataset of generated rationales</p></li>
 </ul>
 </dd>
 </dl>

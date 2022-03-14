@@ -78,20 +78,37 @@
 </section>
 <section id="module-loaders.ConceptNet">
 <span id="module-loaders-conceptnet"></span><h2>loaders.ConceptNet module<a class="headerlink" href="#module-loaders.ConceptNet" title="Permalink to this headline"></a></h2>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="loaders.ConceptNet.ConceptNet">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">loaders.ConceptNet.</span></span><span class="sig-name descname"><span class="pre">ConceptNet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#loaders.ConceptNet.ConceptNet" title="Permalink to this definition"></a></dt>
-<p>Load ConceptNet.</p>
+
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-</dd></dl>
+</dd>
+<dl class="py method">
+<dt class="sig sig-object py" id="loaders.ConceptNet.ConceptNet.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ID</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip_ext</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#loaders.ConceptNet.ConceptNet.load" title="Permalink to this definition"></a></dt>
+</dd>
+<p>Load ConceptNet graph.</p>
+
+<dl class="field-list simple">
+  <dt class="field-odd">Parameters</dt>
+  <dd class="field-odd"><p><strong>fname</strong>  (<em>string</em>)  – a file name pointing to the ConceptNet file</p>
+  </dd>
+  
+  <dt class="field-even">Returns</dt>
+  <dd class="field-even"><p>The ConceptNet as an igraph graph</p>
+  </dd></dl> </dl> </dl>
 
 </section>
+
+
 <section id="module-loaders.SGReader">
 <span id="module-loaders-sgreader"></span><h2>loaders.SGReader module<a class="headerlink" href="#module-loaders.SGReader" title="Permalink to this headline"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="loaders.SGReader.SGReader">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">loaders.SGReader.</span></span><span class="sig-name descname"><span class="pre">SGReader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#loaders.SGReader.SGReader" title="Permalink to this definition"></a></dt>
-<p>Load Scene Graph Reader.</p>
+<p>A object that parses Scene Graph Parser outputs.</p>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 
 
@@ -99,7 +116,18 @@
 <dt class="sig sig-object py" id="loaders.SGReader.SGReader.load">
 <span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ID</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strip_ext</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#loaders.SGReader.SGReader.load" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
+<p>Load Scene Graph Reader.</p>
 
+<dl class="field-list simple">
+  <dt class="field-odd">Parameters</dt>
+  <dd class="field-odd"><p><strong>ID</strong>  (<em>string</em>)  – the ID of the image to load (e.g. img_fn from the VCR dataset)</p>
+    <p><strong>string_ext=False</strong>  (<em>bool</em>)  – If the ID is passed with a file extenstion, this needs to be True</p>
+  </dd>
+  
+  <dt class="field-even">Returns</dt>
+  <dd class="field-even"><p>The scne graph as an igraph graph</p>
+  </dd>
+  </dl>
 </dd></dl>
 
 <dl class="py function">
